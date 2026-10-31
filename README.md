@@ -1,4 +1,11 @@
-<div align="center"><img src="assets/profile-banner.png" alt="Fayas — AI/ML student, spider web and neural network themed banner" width="100%"></div><h2 align="center">Hey, I'm Fayas 👋</h2><p align="center">
+<div align="center">
+  <img
+    src="assets/fayas-spider-neural.gif"
+    alt="Animated spider and neural network"
+    width="100%"
+  />
+</div>
+<h2 align="center">Hey, I'm Fayas 👋</h2><p align="center">
   <strong>AI/ML Student · Aspiring AI Engineer</strong>
 </p><p align="center">
   📉 Gradient descent on my life choices.<br>
