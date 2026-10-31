@@ -1,7 +1,7 @@
 <div align="center">
   <img
-    src="assets/fayas-spider-neural.gif"
-    alt="Animated spider and neural network"
+    src="assets/fayas-name-animation.gif"
+    alt="Fayas animated AI/ML profile banner"
     width="100%"
   />
 </div>
