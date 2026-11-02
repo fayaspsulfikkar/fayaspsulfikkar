@@ -1,56 +1,83 @@
+
 <div align="center">
-<!-- ASCII Profile Image (Dark / Light Mode Adaptive SVG) -->
+
+<!-- ═══════════════ ADAPTIVE ASCII PORTRAIT ═══════════════ -->
+
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
-<source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
-<img alt="fayaspsulfikkar's GitHub profile" src="dark_mode.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
+  <img
+    alt="Fayas's ASCII art GitHub profile"
+    src="dark_mode.svg"
+    width="100%"
+  />
 </picture>
-
-<!-- ═══════════════ DARK TERMINAL IDENTITY ═══════════════ -->
-
+<!-- ═══════════════ CYBERPUNK IDENTITY ═══════════════ -->
 <div align="center">
-
-<img
-  src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=8"
-  width="100%"
-  alt=""
-/>
-
+<table width="100%" border="0">
+<tr>
+<td align="left">
+<sub>◈ SYSTEM ONLINE &nbsp; / &nbsp; PERSONAL PROFILE</sub>
+</td>
+<td align="right">
+<sub>AI // ML // RESEARCH</sub>
+</td>
+</tr>
+</table>
 <br>
+<h2 align="center">
+  <samp>⟢ FAYAS P SULFIKKAR ⟣</samp>
+</h2>
 
-<h1>
-  <code>FAYAS<span style="color:#58A6FF">.P</span></code>
-</h1>
-
-<p>
-  <samp>
-    AI/ML ENGINEER IN THE MAKING
-    &nbsp; // &nbsp;
-    BUILDING INTELLIGENCE, ONE MODEL AT A TIME
-  </samp>
+<p align="center">
+  <code>ENGINEERING INTELLIGENCE // BUILDING THE FUTURE</code>
 </p>
 
+<p align="center">
+  <sub>01000110 01000001 01011001 01000001 01010011</sub>
+</p>
+
+<br>
+
+<p align="center">
+  <samp>ASPIRING AI/ML ENGINEER</samp>
+  <br><br>
+  <sub>Exploring intelligence. Understanding the mathematics.<br>Building what's next.</sub>
+</p>
+
+<br>
 <img
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=650&height=35&lines=%3E+initializing+neural_network...;%3E+training+models%2C+breaking+assumptions.;%3E+learning+the+mathematics+behind+intelligence.;%3E+status%3A+still+in+development_"
-  alt="Terminal status animation"
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=800&height=45&lines=%F0%9F%93%89+Gradient+descent+on+my+life+choices.;%F0%9F%8E%93+AI%2FML+student%2C+still+converging.;%E2%98%95+Overfitting+on+caffeine%2C+underfitting+on+sleep.+%F0%9F%98%B4"
+  alt="AI/ML terminal messages"
 />
-
 <br>
-
-<code>LOCATION :: CALICUT, INDIA</code>
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+<sub>⌖ LOCATION</sub>
 <br>
-<code>FOCUS :: MACHINE LEARNING • DEEP LEARNING • AI</code>
+<b>CALICUT, INDIA</b>
+</td>
+<td align="center" width="34%">
+<sub>◉ CURRENT FOCUS</sub>
 <br>
-<code>MODE :: LEARN / BUILD / REPEAT</code>
-
-<br><br>
-
-<img
-  src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=8"
-  width="100%"
-  alt=""
-/>
-
+<b>MACHINE LEARNING</b>
+</td>
+<td align="center" width="33%">
+<sub>⌘ OPERATING MODE</sub>
+<br>
+<b>LEARN · BUILD · FAIL · REPEAT</b>
+</td>
+</tr>
+</table>
+<br>
+<sub>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+<br>
+INITIALIZING THE FUTURE, ONE EXPERIMENT AT A TIME_
+<br>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</sub>
 </div>
 
-<!-- ═══════════════ END TERMINAL IDENTITY ═══════════════ -->
+<!-- ═══════════════ END CYBERPUNK IDENTITY ═══════════════ -->
