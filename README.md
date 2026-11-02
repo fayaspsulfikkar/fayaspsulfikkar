@@ -5,23 +5,52 @@
 <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
 <img alt="fayaspsulfikkar's GitHub profile" src="dark_mode.svg" width="100%" />
 </picture>
-<!-- Animated Name Banner -->
+
+<!-- ═══════════════ DARK TERMINAL IDENTITY ═══════════════ -->
+
+<div align="center">
+
 <img
-src="assets/fayas-name-animation.gif"
-alt="Fayas animated AI/ML profile banner"
-width="100%"
+  src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=8"
+  width="100%"
+  alt=""
 />
-<!-- Animated Waving Header Banner -->
+
+<br>
+
+<h1>
+  <code>FAYAS<span style="color:#58A6FF">.P</span></code>
+</h1>
+
+<p>
+  <samp>
+    AI/ML ENGINEER IN THE MAKING
+    &nbsp; // &nbsp;
+    BUILDING INTELLIGENCE, ONE MODEL AT A TIME
+  </samp>
+</p>
+
 <img
-src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hey,%20I'm%20Fayas%20%F0%9F%91%8B&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI/ML%20Student%20%E2%80%A2%20Aspiring%20AI%20Engineer&descAlignY=58&descSize=18"
-width="100%"
-alt="Header Banner"
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=14&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=650&height=35&lines=%3E+initializing+neural_network...;%3E+training+models%2C+breaking+assumptions.;%3E+learning+the+mathematics+behind+intelligence.;%3E+status%3A+still+in+development_"
+  alt="Terminal status animation"
 />
-<!-- Animated Typing Taglines -->
-<a href="https://git.io/typing-svg">
+
+<br>
+
+<code>LOCATION :: CALICUT, INDIA</code>
+<br>
+<code>FOCUS :: MACHINE LEARNING • DEEP LEARNING • AI</code>
+<br>
+<code>MODE :: LEARN / BUILD / REPEAT</code>
+
+<br><br>
+
 <img
-src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=%F0%9F%93%89+Gradient+descent+on+my+life+choices.;%F0%9F%8E%93+AI%2FML+student%2C+still+converging.;%E2%98%95+Overfitting+on+caffeine%2C+underfitting+on+sleep.+%F0%9F%98%B4"
-alt="Typing SVG"
+  src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=8"
+  width="100%"
+  alt=""
 />
-</a>
+
 </div>
+
+<!-- ═══════════════ END TERMINAL IDENTITY ═══════════════ -->
