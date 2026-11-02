@@ -29,14 +29,6 @@
   <samp>⟢ FAYAS P SULFIKKAR ⟣</samp>
 </h2>
 
-<p align="center">
-  <code>ENGINEERING INTELLIGENCE // BUILDING THE FUTURE</code>
-</p>
-
-<p align="center">
-  <sub>01000110 01000001 01011001 01000001 01010011</sub>
-</p>
-
 <br>
 
 <p align="center">
