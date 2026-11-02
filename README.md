@@ -25,4 +25,3 @@ alt="Typing SVG"
 />
 </a>
 </div>
-🧠 About Me
