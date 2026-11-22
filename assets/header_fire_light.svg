@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" width="100%" height="100%">
+  <defs>
+    <!-- Soft Warm Drop Shadow (Light Mode) -->
+    <filter id="fire-card-shadow-light" x="-10%" y="-10%" width="120%" height="125%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur1"/>
+      <feOffset in="blur1" dx="0" dy="5" result="offsetDark"/>
+      <feFlood flood-color="#8c3a00" flood-opacity="0.14" result="colorDark"/>
+      <feComposite in="colorDark" in2="offsetDark" operator="in" result="shadowDark"/>
+
+      <feMerge>
+        <feMergeNode in="shadowDark"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="ambient-fire-blur-light" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="45" result="blur"/>
+    </filter>
+
+    <!-- Warm Light Palette -->
+    <linearGradient id="fireCardSurfaceLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffdfa"/>
+      <stop offset="50%" stop-color="#fdf8f0"/>
+      <stop offset="100%" stop-color="#faf2e6"/>
+    </linearGradient>
+
+    <linearGradient id="fireBorderGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e65100" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#ff8f00" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#bf360c" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="fireWellSurfaceLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5ede0"/>
+      <stop offset="100%" stop-color="#efe5d5"/>
+    </linearGradient>
+
+    <linearGradient id="firePillSurfaceLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7ede1"/>
+    </linearGradient>
+
+    <!-- Rich Terracotta / Flame Title Gradient -->
+    <linearGradient id="fireTitleGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b71c1c"/>
+      <stop offset="35%" stop-color="#d84315"/>
+      <stop offset="70%" stop-color="#e65100"/>
+      <stop offset="100%" stop-color="#ef6c00"/>
+    </linearGradient>
+
+    <!-- Ambient Radiance -->
+    <radialGradient id="fireAmbientOrangeLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9800" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="wellClipLight">
+      <rect x="0" y="0" width="800" height="96" rx="14"/>
+    </clipPath>
+
+    <style>
+      @keyframes flamePulseLight {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.45; transform: scale(0.88); }
+      }
+      .flame-indicator-light {
+        animation: flamePulseLight 2.0s ease-in-out infinite;
+        transform-origin: 58px 45px;
+      }
+    </style>
+  </defs>
+
+  <!-- GitHub Light Canvas Background -->
+  <rect width="880" height="270" fill="#ffffff"/>
+
+  <!-- Ambient Radiance -->
+  <g filter="url(#ambient-fire-blur-light)">
+    <ellipse cx="220" cy="90" rx="200" ry="100" fill="url(#fireAmbientOrangeLight)"/>
+    <ellipse cx="680" cy="170" rx="220" ry="110" fill="url(#fireAmbientOrangeLight)"/>
+  </g>
+
+  <!-- Main Card -->
+  <rect x="16" y="14" width="848" height="242" rx="18" fill="url(#fireCardSurfaceLight)" filter="url(#fire-card-shadow-light)" stroke="url(#fireBorderGradLight)" stroke-width="1.2"/>
+
+  <!-- Top Telemetry Pill: Status -->
+  <g transform="translate(38, 30)">
+    <rect x="0" y="0" width="144" height="28" rx="14" fill="url(#firePillSurfaceLight)" stroke="#e65100" stroke-width="0.8" stroke-opacity="0.35"/>
+    <circle cx="18" cy="14" r="6" fill="#e65100" fill-opacity="0.2" class="flame-indicator-light"/>
+    <circle cx="18" cy="14" r="3.5" fill="#e65100" class="flame-indicator-light"/>
+    <text x="32" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#bf360c" letter-spacing="1.2">SYSTEM ONLINE</text>
+  </g>
+
+  <!-- Top Telemetry Pill: Location -->
+  <g transform="translate(668, 30)">
+    <rect x="0" y="0" width="174" height="28" rx="14" fill="url(#firePillSurfaceLight)" stroke="#e65100" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="87" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#d84315" letter-spacing="0.9">
+      📍 CALICUT &#160;•&#160; BROTOTYPE
+    </text>
+  </g>
+
+  <!-- Hero Name -->
+  <text x="440" y="55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="url(#fireTitleGradLight)" letter-spacing="2.8">
+    FAYAS P SULFIKKAR
+  </text>
+  
+  <!-- Profile Subtitle -->
+  <text x="440" y="76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#8d4b1a" letter-spacing="1.5">
+    AI / ML STUDENT &amp; SYSTEMS RESEARCHER &#160;•&#160; INDEPENDENT BUILDER
+  </text>
+
+  <!-- Centerpiece: Debossed Ash Well for First Impression Bio -->
+  <g transform="translate(40, 94)">
+    <rect x="0" y="0" width="800" height="96" rx="14" fill="url(#fireWellSurfaceLight)" stroke="#d9cbba" stroke-width="1.2"/>
+
+    <!-- Inset Top-Left Subtle Shadow -->
+    <path d="M 2 16 L 2 2 Q 2 2 16 2 L 784 2" fill="none" stroke="#ba9e83" stroke-width="1.5" opacity="0.45"/>
+
+    <!-- First Impression Bio Lines -->
+    <text x="400" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#2d1d12" letter-spacing="0.3">
+      📉 𝗚𝗿𝗮𝗱𝗶𝗲𝗻𝘁 𝗱𝗲𝘀𝗰𝗲𝗻𝘁 ᴏɴ ᴍʏ ʟɪғᴇ ᴄʜᴏɪᴄᴇs.
+    </text>
+    <text x="400" y="55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#bf360c" letter-spacing="0.3">
+      🎓 ᴀɪ/ᴍʟ sᴛᴜᴅᴇɴᴛ, sᴛɪʟʟ ᴄᴏɴᴠᴇʀɢɪɴɢ.
+    </text>
+    <text x="400" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#8c3a00" letter-spacing="0.3">
+      ☕ ᴏᴠᴇʀғɪᴛᴛɪɴɢ ᴏɴ ᴄᴀғғᴇɪɴᴇ, ᴜɴᴅᴇʀғɪᴛᴛɪɴɢ ᴏɴ sʟᴇᴇᴘ. 😴
+    </text>
+  </g>
+
+  <!-- Bottom Tagline / Philosophy -->
+  <g transform="translate(40, 206)">
+    <!-- Decorative Warm Divider Line -->
+    <line x1="200" y1="5" x2="600" y2="5" stroke="url(#fireBorderGradLight)" stroke-width="0.8" stroke-opacity="0.6"/>
+    
+    <text x="400" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#8d4b1a" letter-spacing="1.2">
+      Exploring intelligence &#160;•&#160; Understanding the mathematics &#160;•&#160; Building what's next
+    </text>
+  </g>
+</svg>
