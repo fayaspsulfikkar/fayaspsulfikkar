@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 170" width="100%" height="100%">
+  <defs>
+    <filter id="card-shadow-l" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur1"/>
+      <feOffset in="blur1" dx="4" dy="4" result="offsetDark"/>
+      <feFlood flood-color="#d0d7de" flood-opacity="0.85" result="colorDark"/>
+      <feComposite in="colorDark" in2="offsetDark" operator="in" result="shadowDark"/>
+
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur2"/>
+      <feOffset in="blur2" dx="-3" dy="-3" result="offsetLight"/>
+      <feFlood flood-color="#ffffff" flood-opacity="0.95" result="colorLight"/>
+      <feComposite in="colorLight" in2="offsetLight" operator="in" result="shadowLight"/>
+
+      <feMerge>
+        <feMergeNode in="shadowDark"/>
+        <feMergeNode in="shadowLight"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="cardBgL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f6f8fa"/>
+    </linearGradient>
+
+    <linearGradient id="tagBgL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff1f3"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="170" fill="#ffffff"/>
+  <rect x="8" y="8" width="404" height="154" rx="14" fill="url(#cardBgL)" filter="url(#card-shadow-l)" stroke="#d0d7de" stroke-width="1.2"/>
+
+  <!-- Header: Icon + Title -->
+  <text x="24" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="16" font-weight="700" fill="#1f2328">
+    👁️ Ayush Tracker
+  </text>
+
+  <!-- Tag Pill -->
+  <g transform="translate(400, 24)">
+    <rect x="-105" y="0" width="100" height="22" rx="11" fill="url(#tagBgL)" stroke="#1a7f37" stroke-width="1"/>
+    <text x="-55" y="15" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', monospace" font-size="10" font-weight="600" fill="#1a7f37">
+      MediaPipe WASM
+    </text>
+  </g>
+
+  <line x1="24" y1="52" x2="396" y2="52" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Description Body -->
+  <text x="24" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="12" font-weight="500" fill="#24292f">
+    Private, offline-first study time tracker running
+  </text>
+  <text x="24" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="12" font-weight="400" fill="#57606a">
+    real-time computer vision attention tracking in-browser.
+  </text>
+
+  <line x1="24" y1="116" x2="396" y2="116" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Stack Tags -->
+  <text x="24" y="140" font-family="'Consolas', 'Menlo', monospace" font-size="11" fill="#57606a">
+    MediaPipe WASM • CV • JavaScript
+  </text>
+
+  <!-- Action CTA -->
+  <text x="396" y="140" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#1a7f37">
+    Explore ↗
+  </text>
+</svg>

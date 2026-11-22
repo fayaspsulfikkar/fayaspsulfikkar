@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ═══════════════════════ GENERATIVE ASCII EYE → SPACE ANIMATION ═══════════════════════ -->
-<img src="assets/eye_animation.gif" alt="Eye → Space Generative ASCII Animation" width="100%" style="max-width: 650px; border-radius: 16px;" />
+<img src="assets/eye_animation.gif" alt="Generative ASCII Eye Animation" width="600" />
 
 <br><br>
 
@@ -27,61 +27,43 @@
 
 <br><br>
 
-<!-- ═══════════════════════ FEATURED PROJECTS SHOWCASE ═══════════════════════ -->
+<!-- ═══════════════════════ FEATURED PROJECTS SHOWCASE (NATIVE NEUMORPHIC SVG CARDS) ═══════════════════════ -->
 <div align="left">
-  <h3>⟢ FEATURED BUILDS &amp; RESEARCH</h3>
+  <h3><samp>⟢ FEATURED BUILDS &amp; RESEARCH</samp></h3>
 </div>
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
+<p align="center">
+  <a href="https://github.com/fayaspsulfikkar/cerebrum-app">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="card_cerebrum.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="card_cerebrum_light.svg" />
+      <img src="card_cerebrum.svg" width="49%" alt="Cerebrum App" />
+    </picture>
+  </a>
+  <a href="https://github.com/fayaspsulfikkar/ayush_tracker">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="card_ayush.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="card_ayush_light.svg" />
+      <img src="card_ayush.svg" width="49%" alt="Ayush Tracker" />
+    </picture>
+  </a>
+</p>
 
-### 🧠 [Cerebrum App](https://github.com/fayaspsulfikkar/cerebrum-app)
-> **Brain encoding foundation platform predicting localized fMRI brain activity from video.**
-- Leverages Meta's **TRIBE v2** multimodal neural encoder.
-- Predicts human cognitive responses directly from standard `.mp4` video files.
-- `Meta TRIBE v2` • `PyTorch` • `fMRI Simulation` • `FastAPI`
-
-[View Repository](https://github.com/fayaspsulfikkar/cerebrum-app) &nbsp;|&nbsp; [Research Paper](https://github.com/fayaspsulfikkar/crbrm_rsrch_ppr)
-
-</td>
-<td width="50%" valign="top">
-
-### 👁️ [Ayush Tracker](https://github.com/fayaspsulfikkar/ayush_tracker)
-> **Private, offline-first study focus tracker running computer vision directly in the browser.**
-- Powered by client-side **MediaPipe WASM** for zero-latency face and gaze tracking.
-- Zero server-side video feeds or cloud telemetry — total user privacy by design.
-- `MediaPipe WASM` • `Computer Vision` • `JavaScript`
-
-[View Repository](https://github.com/fayaspsulfikkar/ayush_tracker) &nbsp;|&nbsp; [Live App](https://ayushtracker.vercel.app)
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-### ⚡ [Ola KeyApp](https://github.com/fayaspsulfikkar/ola-keyapp)
-> **Reverse-engineering the Ola S1 Pro (MoveOS 5.0) Bluetooth Low Energy protocol.**
-- Packet-sniffed and decoded proprietary BLE handshake and telemetry exchanges.
-- Custom companion features, proximity unlock experimentation, and Mod APK boundaries.
-- `Kotlin` • `BLE Protocol Analysis` • `Android Architecture`
-
-[View Repository](https://github.com/fayaspsulfikkar/ola-keyapp)
-
-</td>
-<td width="50%" valign="top">
-
-### 📓 [Daily ML Practice &amp; Self Log](https://github.com/fayaspsulfikkar/daily-ml-practice)
-> **Mathematical foundations, algorithms from scratch, and reconstruction log.**
-- Weekly exercises: backprop from first principles, optimization math, and neural architectures.
-- Coupled with the **Life OS / Self Log** tracking system iterations from 2019 to 2026.
-- `Python` • `PyTorch` • `NumPy` • `Optimization Math`
-
-[ML Practice](https://github.com/fayaspsulfikkar/daily-ml-practice) &nbsp;|&nbsp; [Self Log Interface](https://fayaspsulfikkar.github.io/self-log/)
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://github.com/fayaspsulfikkar/ola-keyapp">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="card_olakey.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="card_olakey_light.svg" />
+      <img src="card_olakey.svg" width="49%" alt="Ola KeyApp" />
+    </picture>
+  </a>
+  <a href="https://github.com/fayaspsulfikkar/daily-ml-practice">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="card_dailyml.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="card_dailyml_light.svg" />
+      <img src="card_dailyml.svg" width="49%" alt="Daily ML Practice &amp; Self Log" />
+    </picture>
+  </a>
+</p>
 
 </div>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 170" width="100%" height="100%">
+  <defs>
+    <!-- Neumorphic Drop Shadow for Card -->
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur1"/>
+      <feOffset in="blur1" dx="4" dy="4" result="offsetDark"/>
+      <feFlood flood-color="#010409" flood-opacity="0.85" result="colorDark"/>
+      <feComposite in="colorDark" in2="offsetDark" operator="in" result="shadowDark"/>
+
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur2"/>
+      <feOffset in="blur2" dx="-3" dy="-3" result="offsetLight"/>
+      <feFlood flood-color="#30363d" flood-opacity="0.4" result="colorLight"/>
+      <feComposite in="colorLight" in2="offsetLight" operator="in" result="shadowLight"/>
+
+      <feMerge>
+        <feMergeNode in="shadowDark"/>
+        <feMergeNode in="shadowLight"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181d25"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+
+    <linearGradient id="tagBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer canvas matching GitHub dark mode -->
+  <rect width="420" height="170" fill="#0d1117"/>
+
+  <!-- Main Extruded Neumorphic Card -->
+  <rect x="8" y="8" width="404" height="154" rx="14" fill="url(#cardBg)" filter="url(#card-shadow)" stroke="#30363d" stroke-width="1.2"/>
+
+  <!-- Top Bevel Light Catch Rim -->
+  <path d="M 22 9 L 398 9" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15" stroke-linecap="round"/>
+
+  <!-- Header: Icon + Title -->
+  <text x="24" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">
+    👁️ Ayush Tracker
+  </text>
+
+  <!-- Tag Pill -->
+  <g transform="translate(400, 24)">
+    <rect x="-105" y="0" width="100" height="22" rx="11" fill="url(#tagBg)" stroke="#3fb950" stroke-width="0.9" stroke-opacity="0.7"/>
+    <text x="-55" y="15" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', monospace" font-size="10" font-weight="600" fill="#3fb950">
+      MediaPipe WASM
+    </text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="24" y1="52" x2="396" y2="52" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Description Body -->
+  <text x="24" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="12" font-weight="500" fill="#c9d1d9">
+    Private, offline-first study time tracker running
+  </text>
+  <text x="24" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="12" font-weight="400" fill="#8b949e">
+    real-time computer vision attention tracking in-browser.
+  </text>
+
+  <!-- Footer: Stack + Link Prompt -->
+  <line x1="24" y1="116" x2="396" y2="116" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Stack Tags -->
+  <text x="24" y="140" font-family="'Consolas', 'Menlo', monospace" font-size="11" fill="#8b949e">
+    MediaPipe WASM • CV • JavaScript
+  </text>
+
+  <!-- Action CTA -->
+  <text x="396" y="140" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#3fb950">
+    Explore ↗
+  </text>
+</svg>
