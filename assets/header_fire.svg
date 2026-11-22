@@ -1,211 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" width="100%" height="100%">
   <defs>
-    <!-- Fire & Ember Shadows (GitHub Dark) -->
-    <filter id="fire-card-shadow" x="-10%" y="-10%" width="120%" height="125%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur1"/>
-      <feOffset in="blur1" dx="0" dy="6" result="offsetDark"/>
-      <feFlood flood-color="#020100" flood-opacity="0.95" result="colorDark"/>
-      <feComposite in="colorDark" in2="offsetDark" operator="in" result="shadowDark"/>
-
-      <!-- Warm Ember Outer Aura -->
-      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blurEmber"/>
-      <feFlood flood-color="#ff4500" flood-opacity="0.22" result="colorEmber"/>
-      <feComposite in="colorEmber" in2="blurEmber" operator="in" result="shadowEmber"/>
-
-      <feMerge>
-        <feMergeNode in="shadowDark"/>
-        <feMergeNode in="shadowEmber"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="fire-pill-shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur1"/>
-      <feOffset in="blur1" dx="2" dy="2" result="offsetDark"/>
-      <feFlood flood-color="#000000" flood-opacity="0.85" result="colorDark"/>
-      <feComposite in="colorDark" in2="offsetDark" operator="in" result="shadowDark"/>
-
-      <feMerge>
-        <feMergeNode in="shadowDark"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
+    <!-- Soft Ambient Fire Glow Filters -->
     <filter id="ambient-fire-blur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="45" result="blur"/>
+      <feGaussianBlur stdDeviation="40" result="blur"/>
     </filter>
 
-    <!-- Fire Palette Gradients -->
-    <linearGradient id="fireCardSurface" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#140d08"/>
-      <stop offset="50%" stop-color="#100a06"/>
-      <stop offset="100%" stop-color="#0b0704"/>
-    </linearGradient>
-
-    <linearGradient id="fireBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff5500" stop-opacity="0.75"/>
-      <stop offset="50%" stop-color="#ff8c00" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#ff3300" stop-opacity="0.6"/>
-    </linearGradient>
-
-    <linearGradient id="fireWellSurface" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070402"/>
-      <stop offset="100%" stop-color="#0a0604"/>
-    </linearGradient>
-
-    <linearGradient id="firePillSurface" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1b1009"/>
-      <stop offset="100%" stop-color="#120a05"/>
-    </linearGradient>
+    <filter id="text-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="blur"/>
+      <feFlood flood-color="#ff5500" flood-opacity="0.35" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
     <!-- Glowing Flame Title Gradient -->
     <linearGradient id="fireTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="25%" stop-color="#ffebaa"/>
-      <stop offset="55%" stop-color="#ffa726"/>
+      <stop offset="30%" stop-color="#ffebaa"/>
+      <stop offset="60%" stop-color="#ffa726"/>
       <stop offset="85%" stop-color="#ff7043"/>
       <stop offset="100%" stop-color="#ff3d00"/>
     </linearGradient>
 
+    <!-- Soft Ember Gradient Divider -->
+    <linearGradient id="fireDividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5500" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#ff7043" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#ffa726" stop-opacity="0.75"/>
+      <stop offset="75%" stop-color="#ff7043" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff5500" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Transparent Pill Surface -->
+    <linearGradient id="pillTransGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7043" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ff3d00" stop-opacity="0.04"/>
+    </linearGradient>
+
     <!-- Ember Ambient Radiance Glows -->
-    <radialGradient id="fireAmbientOrange" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ff5500" stop-opacity="0.28"/>
+    <radialGradient id="fireAmbientCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff5500" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#ff7043" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#ff5500" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="fireAmbientGold" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffa726" stop-opacity="0.24"/>
+    <radialGradient id="fireAmbientRight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffa726" stop-opacity="0.16"/>
+      <stop offset="70%" stop-color="#ffa726" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#ffa726" stop-opacity="0"/>
     </radialGradient>
-
-    <radialGradient id="fireAmbientCrimson" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#dd2c00" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#dd2c00" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Fiery Sheen Pass -->
-    <linearGradient id="fireSheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffa726" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffebaa" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#ffa726" stop-opacity="0"/>
-    </linearGradient>
-
-    <clipPath id="wellClip">
-      <rect x="0" y="0" width="800" height="96" rx="14"/>
-    </clipPath>
 
     <style>
-      @keyframes ambientDrift1 {
-        0% { transform: translate(0px, 0px); opacity: 0.7; }
-        50% { transform: translate(40px, 15px); opacity: 1; }
-        100% { transform: translate(0px, 0px); opacity: 0.7; }
-      }
-      @keyframes ambientDrift2 {
-        0% { transform: translate(0px, 0px); opacity: 0.6; }
-        50% { transform: translate(-35px, -12px); opacity: 0.95; }
-        100% { transform: translate(0px, 0px); opacity: 0.6; }
-      }
       @keyframes flamePulse {
         0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.45; transform: scale(0.88); }
+        50% { opacity: 0.35; transform: scale(0.85); }
       }
-      @keyframes sheenPass {
-        0% { transform: translateX(-300px) skewX(-20deg); }
-        35% { transform: translateX(900px) skewX(-20deg); }
-        100% { transform: translateX(900px) skewX(-20deg); }
-      }
-
-      .glow-1 {
-        animation: ambientDrift1 12s ease-in-out infinite alternate;
-      }
-      .glow-2 {
-        animation: ambientDrift2 15s ease-in-out infinite alternate;
+      @keyframes ambientFloat {
+        0% { transform: translateY(0px); opacity: 0.8; }
+        50% { transform: translateY(-8px); opacity: 1; }
+        100% { transform: translateY(0px); opacity: 0.8; }
       }
       .flame-indicator {
-        animation: flamePulse 2.0s ease-in-out infinite;
-        transform-origin: 58px 45px;
+        animation: flamePulse 2.2s ease-in-out infinite;
+        transform-origin: 18px 14px;
       }
-      .sheen-anim {
-        animation: sheenPass 7.0s ease-in-out infinite;
+      .aura {
+        animation: ambientFloat 8s ease-in-out infinite;
       }
     </style>
   </defs>
 
-  <!-- GitHub Dark / Obsidian Canvas -->
-  <rect width="880" height="270" fill="#0d1117"/>
+  <!-- ZERO background rectangles: 100% transparent to blend with GitHub seamlessly -->
 
-  <!-- Ambient Flame Radiance -->
-  <g filter="url(#ambient-fire-blur)">
-    <ellipse cx="200" cy="85" rx="210" ry="110" fill="url(#fireAmbientOrange)" class="glow-1"/>
-    <ellipse cx="690" cy="165" rx="230" ry="120" fill="url(#fireAmbientGold)" class="glow-2"/>
-    <ellipse cx="440" cy="235" rx="200" ry="80" fill="url(#fireAmbientCrimson)"/>
+  <!-- Soft Floating Ambient Ember Auras -->
+  <g filter="url(#ambient-fire-blur)" class="aura">
+    <ellipse cx="440" cy="70" rx="260" ry="55" fill="url(#fireAmbientCenter)"/>
+    <ellipse cx="440" cy="155" rx="280" ry="45" fill="url(#fireAmbientRight)"/>
   </g>
 
-  <!-- Main Fire Neumorphic Card -->
-  <rect x="16" y="14" width="848" height="242" rx="18" fill="url(#fireCardSurface)" filter="url(#fire-card-shadow)" stroke="url(#fireBorderGrad)" stroke-width="1.2"/>
-
-  <!-- Specular Top Rim Golden Highlight -->
-  <path d="M 36 15 L 844 15" stroke="#ffa726" stroke-width="1.2" stroke-opacity="0.32" stroke-linecap="round"/>
-
-  <!-- Top Telemetry Pill: Status / Protocol -->
-  <g transform="translate(38, 30)">
-    <rect x="0" y="0" width="144" height="28" rx="14" fill="url(#firePillSurface)" filter="url(#fire-pill-shadow)" stroke="#ff6f00" stroke-width="0.75" stroke-opacity="0.5"/>
-    <circle cx="18" cy="14" r="6" fill="#ff5500" fill-opacity="0.25" class="flame-indicator"/>
-    <circle cx="18" cy="14" r="3.5" fill="#ff7a00" class="flame-indicator"/>
-    <text x="32" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#ff9100" letter-spacing="1.2">SYSTEM ONLINE</text>
+  <!-- Top Telemetry Row (Transparent Pills, No Hard Borders) -->
+  <g transform="translate(60, 10)">
+    <!-- Left Pill: Status -->
+    <rect x="0" y="0" width="138" height="26" rx="13" fill="url(#pillTransGrad)"/>
+    <circle cx="16" cy="13" r="5" fill="#ff5500" fill-opacity="0.3" class="flame-indicator"/>
+    <circle cx="16" cy="13" r="3" fill="#ff7a00" class="flame-indicator"/>
+    <text x="28" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#ff9800" letter-spacing="1.2">SYSTEM ONLINE</text>
   </g>
 
-  <!-- Top Telemetry Pill: Location & Origin -->
-  <g transform="translate(668, 30)">
-    <rect x="0" y="0" width="174" height="28" rx="14" fill="url(#firePillSurface)" filter="url(#fire-pill-shadow)" stroke="#ff6f00" stroke-width="0.75" stroke-opacity="0.5"/>
-    <text x="87" y="18" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#ffa726" letter-spacing="0.9">
+  <g transform="translate(650, 10)">
+    <!-- Right Pill: Location -->
+    <rect x="0" y="0" width="170" height="26" rx="13" fill="url(#pillTransGrad)"/>
+    <text x="85" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#ffb74d" letter-spacing="0.8">
       📍 CALICUT &#160;•&#160; BROTOTYPE
     </text>
   </g>
 
-  <!-- Hero Name: Glowing Fire Gradient -->
-  <text x="440" y="55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="url(#fireTitleGrad)" letter-spacing="2.8">
+  <!-- Hero Name: Glowing Incandescent Fire Typography -->
+  <text x="440" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="url(#fireTitleGrad)" letter-spacing="3" filter="url(#text-glow)">
     FAYAS P SULFIKKAR
   </text>
   
   <!-- Profile Subtitle -->
-  <text x="440" y="76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#ffb74d" letter-spacing="1.5">
+  <text x="440" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#ffb74d" fill-opacity="0.88" letter-spacing="1.6">
     AI / ML STUDENT &amp; SYSTEMS RESEARCHER &#160;•&#160; INDEPENDENT BUILDER
   </text>
 
-  <!-- Centerpiece: Debossed Charcoal Ash Well for First Impression Bio -->
-  <g transform="translate(40, 94)">
-    <rect x="0" y="0" width="800" height="96" rx="14" fill="url(#fireWellSurface)" stroke="#050302" stroke-width="2"/>
+  <!-- Glowing Transparent Ember Divider -->
+  <line x1="140" y1="102" x2="740" y2="102" stroke="url(#fireDividerGrad)" stroke-width="1.2"/>
 
-    <!-- Inset Top-Left Dark Shadow -->
-    <path d="M 2 16 L 2 2 Q 2 2 16 2 L 784 2" fill="none" stroke="#000000" stroke-width="2.5" opacity="0.95"/>
-    <!-- Inset Bottom-Right Warm Amber Rim -->
-    <path d="M 798 80 L 798 94 Q 798 94 784 94 L 16 94" fill="none" stroke="#ff7700" stroke-width="0.9" opacity="0.45"/>
+  <!-- Signature First Impression Bio (Floating, No Borders, Seamless) -->
+  <text x="440" y="130" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="0.3">
+    📉 𝗚𝗿𝗮𝗱𝗶𝗲𝗻𝘁 𝗱𝗲𝘀𝗰𝗲𝗻𝘁 ᴏɴ ᴍʏ ʟɪғᴇ ᴄʜᴏɪᴄᴇs.
+  </text>
 
-    <!-- Sheen Pass -->
-    <g clip-path="url(#wellClip)">
-      <rect x="0" y="0" width="160" height="96" fill="url(#fireSheenGrad)" class="sheen-anim"/>
-    </g>
+  <text x="440" y="155" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffcc80" letter-spacing="0.3">
+    🎓 ᴀɪ/ᴍʟ sᴛᴜᴅᴇɴᴛ, sᴛɪʟʟ ᴄᴏɴᴠᴇʀɢɪɴɢ.
+  </text>
 
-    <!-- First Impression Bio Lines -->
-    <text x="400" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#fff5ea" letter-spacing="0.3">
-      📉 𝗚𝗿𝗮𝗱𝗶𝗲𝗻𝘁 𝗱𝗲𝘀𝗰𝗲𝗻𝘁 ᴏɴ ᴍʏ ʟɪғᴇ ᴄʜᴏɪᴄᴇs.
-    </text>
-    <text x="400" y="55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#ffcc80" letter-spacing="0.3">
-      🎓 ᴀɪ/ᴍʟ sᴛᴜᴅᴇɴᴛ, sᴛɪʟʟ ᴄᴏɴᴠᴇʀɢɪɴɢ.
-    </text>
-    <text x="400" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#ff9800" letter-spacing="0.3">
-      ☕ ᴏᴠᴇʀғɪᴛᴛɪɴɢ ᴏɴ ᴄᴀғғᴇɪɴᴇ, ᴜɴᴅᴇʀғɪᴛᴛɪɴɢ ᴏɴ sʟᴇᴇᴘ. 😴
-    </text>
-  </g>
+  <text x="440" y="180" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#ff8a50" letter-spacing="0.3">
+    ☕ ᴏᴠᴇʀғɪᴛᴛɪɴɢ ᴏɴ ᴄᴀғғᴇɪɴᴇ, ᴜɴᴅᴇʀғɪᴛᴛɪɴɢ ᴏɴ sʟᴇᴇᴘ. 😴
+  </text>
 
-  <!-- Bottom Tagline / Philosophy -->
-  <g transform="translate(40, 206)">
-    <!-- Decorative Warm Divider Line -->
-    <line x1="200" y1="5" x2="600" y2="5" stroke="url(#fireBorderGrad)" stroke-width="0.8" stroke-opacity="0.6"/>
-    
-    <text x="400" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#d49b6a" letter-spacing="1.2">
-      Exploring intelligence &#160;•&#160; Understanding the mathematics &#160;•&#160; Building what's next
-    </text>
-  </g>
+  <!-- Philosophy Subtitle -->
+  <text x="440" y="206" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="500" fill="#d49b6a" fill-opacity="0.8" letter-spacing="1.2">
+    Exploring intelligence &#160;•&#160; Understanding the mathematics &#160;•&#160; Building what's next
+  </text>
 </svg>
