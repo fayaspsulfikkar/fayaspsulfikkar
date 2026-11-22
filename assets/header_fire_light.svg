@@ -1,9 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="100%">
   <defs>
-    <!-- Soft Ambient Warm Glow Filters (Light Mode) -->
+    <!-- Soft Ambient Warm Glow Filter (Light Mode) -->
     <filter id="ambient-fire-blur-light" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="35" result="blur"/>
     </filter>
+
+    <!-- Top Gradient Blend for Light Mode: blends the dark video bottom into transparent -->
+    <linearGradient id="topVideoBlendGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#000000" stop-opacity="0.7"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
 
     <!-- Rich Terracotta / Flame Title Gradient -->
     <linearGradient id="fireTitleGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -16,19 +24,17 @@
     <!-- Soft Divider Gradient -->
     <linearGradient id="fireDividerGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#e65100" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#e65100" stop-opacity="0.35"/>
-      <stop offset="50%" stop-color="#d84315" stop-opacity="0.55"/>
-      <stop offset="75%" stop-color="#e65100" stop-opacity="0.35"/>
+      <stop offset="30%" stop-color="#e65100" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#d84315" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#e65100" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Transparent Pill Surface -->
-    <linearGradient id="pillTransGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Pill Surface Light -->
+    <linearGradient id="asciiPillSurfaceLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#e65100" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#ff8f00" stop-opacity="0.03"/>
     </linearGradient>
 
-    <!-- Ambient Glows -->
     <radialGradient id="fireAmbientLight" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ff9800" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
@@ -40,62 +46,67 @@
         50% { opacity: 0.35; transform: scale(0.85); }
       }
       .flame-indicator-light {
-        animation: flamePulseLight 2.2s ease-in-out infinite;
+        animation: flamePulseLight 2.0s ease-in-out infinite;
         transform-origin: 16px 13px;
       }
     </style>
   </defs>
 
-  <!-- ZERO background rectangles: 100% transparent to blend with GitHub light mode seamlessly -->
+  <!-- Top Blending Element -->
+  <rect x="0" y="0" width="880" height="70" fill="url(#topVideoBlendGradLight)"/>
 
-  <!-- Soft Ambient Glow -->
+  <!-- Ambient Flame Radiance -->
   <g filter="url(#ambient-fire-blur-light)">
-    <ellipse cx="440" cy="70" rx="260" ry="55" fill="url(#fireAmbientLight)"/>
+    <ellipse cx="440" cy="90" rx="260" ry="50" fill="url(#fireAmbientLight)"/>
   </g>
 
-  <!-- Top Telemetry Row (Transparent Pills, No Hard Borders) -->
-  <g transform="translate(60, 10)">
-    <rect x="0" y="0" width="138" height="26" rx="13" fill="url(#pillTransGradLight)"/>
+  <!-- Top Telemetry Row (ASCII Terminal Pills) -->
+  <g transform="translate(60, 26)">
+    <rect x="0" y="0" width="160" height="26" rx="4" fill="url(#asciiPillSurfaceLight)" stroke="#e65100" stroke-width="0.8" stroke-opacity="0.35"/>
     <circle cx="16" cy="13" r="5" fill="#e65100" fill-opacity="0.25" class="flame-indicator-light"/>
     <circle cx="16" cy="13" r="3" fill="#e65100" class="flame-indicator-light"/>
-    <text x="28" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#bf360c" letter-spacing="1.2">SYSTEM ONLINE</text>
+    <text x="28" y="17" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9.5" font-weight="700" fill="#bf360c" letter-spacing="1.2">[ SYSTEM // ONLINE ]</text>
   </g>
 
-  <g transform="translate(650, 10)">
-    <rect x="0" y="0" width="170" height="26" rx="13" fill="url(#pillTransGradLight)"/>
-    <text x="85" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#c2410c" letter-spacing="0.8">
-      📍 CALICUT &#160;•&#160; BROTOTYPE
+  <g transform="translate(635, 26)">
+    <rect x="0" y="0" width="185" height="26" rx="4" fill="url(#asciiPillSurfaceLight)" stroke="#e65100" stroke-width="0.8" stroke-opacity="0.35"/>
+    <text x="92" y="17" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9.5" font-weight="700" fill="#c2410c" letter-spacing="0.8">
+      [ 📍 CALICUT // BROTOTYPE ]
     </text>
   </g>
 
-  <!-- Hero Name -->
-  <text x="440" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="url(#fireTitleGradLight)" letter-spacing="3">
+  <!-- Hero Name: ASCII Monospace Fire Typography -->
+  <text x="440" y="86" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="31" font-weight="900" fill="url(#fireTitleGradLight)" letter-spacing="4">
     FAYAS P SULFIKKAR
   </text>
   
   <!-- Profile Subtitle -->
-  <text x="440" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#8d4b1a" letter-spacing="1.6">
-    AI / ML STUDENT &amp; SYSTEMS RESEARCHER &#160;•&#160; INDEPENDENT BUILDER
+  <text x="440" y="109" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#8d4b1a" letter-spacing="1.8">
+    // AI/ML STUDENT &amp; SYSTEMS RESEARCHER • INDEPENDENT BUILDER
   </text>
 
-  <!-- Glowing Transparent Divider -->
-  <line x1="140" y1="102" x2="740" y2="102" stroke="url(#fireDividerGradLight)" stroke-width="1.2"/>
+  <!-- ASCII / Fire Divider -->
+  <line x1="120" y1="127" x2="370" y2="127" stroke="url(#fireDividerGradLight)" stroke-width="1.2"/>
+  <text x="440" y="131" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#d84315" letter-spacing="1.5">
+    ⟢ EMBER ⟣
+  </text>
+  <line x1="510" y1="127" x2="760" y2="127" stroke="url(#fireDividerGradLight)" stroke-width="1.2"/>
 
-  <!-- Signature First Impression Bio (Floating, No Borders, Seamless) -->
-  <text x="440" y="130" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#1c1917" letter-spacing="0.3">
+  <!-- Signature First Impression Bio (Monospace ASCII Style) -->
+  <text x="440" y="160" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="15" font-weight="700" fill="#1c1917" letter-spacing="0.5">
     📉 𝗚𝗿𝗮𝗱𝗶𝗲𝗻𝘁 𝗱𝗲𝘀𝗰𝗲𝗻𝘁 ᴏɴ ᴍʏ ʟɪғᴇ ᴄʜᴏɪᴄᴇs.
   </text>
 
-  <text x="440" y="155" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#c2410c" letter-spacing="0.3">
+  <text x="440" y="186" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="15" font-weight="700" fill="#c2410c" letter-spacing="0.5">
     🎓 ᴀɪ/ᴍʟ sᴛᴜᴅᴇɴᴛ, sᴛɪʟʟ ᴄᴏɴᴠᴇʀɢɪɴɢ.
   </text>
 
-  <text x="440" y="180" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#9a3412" letter-spacing="0.3">
+  <text x="440" y="212" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="15" font-weight="700" fill="#9a3412" letter-spacing="0.5">
     ☕ ᴏᴠᴇʀғɪᴛᴛɪɴɢ ᴏɴ ᴄᴀғғᴇɪɴᴇ, ᴜɴᴅᴇʀғɪᴛᴛɪɴɢ ᴏɴ sʟᴇᴇᴘ. 😴
   </text>
 
-  <!-- Philosophy Subtitle -->
-  <text x="440" y="206" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="500" fill="#8d4b1a" fill-opacity="0.85" letter-spacing="1.2">
-    Exploring intelligence &#160;•&#160; Understanding the mathematics &#160;•&#160; Building what's next
+  <!-- Terminal Philosophy Subtitle -->
+  <text x="440" y="242" text-anchor="middle" font-family="'Courier New', Courier, 'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#8d4b1a" fill-opacity="0.85" letter-spacing="1.4">
+    /* Exploring intelligence • Understanding the mathematics • Building what's next */
   </text>
 </svg>
